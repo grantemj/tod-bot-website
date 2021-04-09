@@ -1,9 +1,9 @@
 <script>
-	import Navbar from './Navbar.svelte'
+	import DesktopNavbar from './DesktopNavbar.svelte'
 </script>
 
 <main>
-	<Navbar mobile={false} />
+	<DesktopNavbar />
 </main>
 
 <style>
