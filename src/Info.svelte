@@ -2,21 +2,23 @@
     export let serverCount
 </script>
 
-<main>
+<div id="info">
     <img src="https://truthordarebot.xyz/PFP.png" alt="Profile pic" id="main-pfp">
     <h2>Currently in <code>{serverCount}</code> servers</h2>
-</main>
+</div>
 
 <style>
-    main {
+    #info {
         width: 100%;
         text-align: center;
+        padding-top: 225px;
+        padding-bottom: 70px;
     }
 
     #main-pfp {
         border-radius: 50%;
-        width: 450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
     }
 
     code {

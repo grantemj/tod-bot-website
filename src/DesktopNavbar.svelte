@@ -2,7 +2,7 @@
     
 </script>
 
-<main>
+<div id="desktop-navbar">
     <a href="https://discordapp.com/api/oauth2/authorize?client_id=692045914436796436&permissions=68608&scope=bot" target="_blank"><img src="https://truthordarebot.xyz/PFP.png" alt="Profile pic" id="pfp"></a>
     <h1 id="title">Truth or Dare</h1>
     <nav>
@@ -21,10 +21,10 @@
             <li><a href="survey" target="_self">Usage Survey</a></li>
         </ul>
     </nav>
-</main>
+</div>
 
 <style>
-    main {
+    #desktop-navbar {
         position: absolute;
         width: 100%;
         background: #202122;
@@ -112,6 +112,7 @@
         flex-direction: column;
         z-index: 4;
         transform: translateY(-300px);
+        padding-left: 10px;
     }
 
     nav ul li ul li {

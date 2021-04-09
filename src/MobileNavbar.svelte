@@ -6,7 +6,7 @@
     }
 </script>
 
-<main>
+<div id="mobile-navbar">
     <button id="mobile-menu" on:click={toggleMenu}></button>
     <div id="top-bar">
         <a href="https://discordapp.com/api/oauth2/authorize?client_id=692045914436796436&permissions=68608&scope=bot" target="_blank"><img src="https://truthordarebot.xyz/PFP.png" alt="Profile pic" id="pfp"></a>  
@@ -30,10 +30,10 @@
             </ul>
         </nav>
     </div>
-</main>
+</div>
 
 <style>
-    main {
+    #mobile-navbar {
         position: absolute;
         width: 100%;
         background: #202122;

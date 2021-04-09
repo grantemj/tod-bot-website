@@ -4,10 +4,11 @@
 	import DesktopNavbarCompact from './DesktopNavbarCompact.svelte'
 	import MobileNavbar from './MobileNavbar.svelte'
 	import Info from './Info.svelte'
+	import About from './About.svelte'
 </script>
 
 <main>
-	<MediaQuery query="(min-width: 481px)" let:matches>
+	<MediaQuery query="(min-width: 811px)" let:matches>
 		{#if matches}
 			<MediaQuery query="(min-width: 1181px)" let:matches>
 				{#if matches}
@@ -22,14 +23,13 @@
 	</MediaQuery>
 	<body>
 		<Info serverCount=61576/>
-
+		<About />
 	</body>
 </main>
 
 <style>
 	body {
 		margin: 0;
-		padding-top: 150px;
 		background: #2d2d2f;
 		color: #f4f1eb;
 	}
