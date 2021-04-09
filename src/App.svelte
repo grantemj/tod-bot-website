@@ -1,11 +1,36 @@
 <script>
+	import MediaQuery from 'svelte-media-query'
 	import DesktopNavbar from './DesktopNavbar.svelte'
+	import DesktopNavbarCompact from './DesktopNavbarCompact.svelte'
+	import MobileNavbar from './MobileNavbar.svelte'
+	import Info from './Info.svelte'
 </script>
 
 <main>
-	<DesktopNavbar />
+	<MediaQuery query="(min-width: 481px)" let:matches>
+		{#if matches}
+			<MediaQuery query="(min-width: 1181px)" let:matches>
+				{#if matches}
+					<DesktopNavbar />
+				{:else}
+					<DesktopNavbarCompact />
+				{/if}
+			</MediaQuery>
+		{:else}
+			<MobileNavbar />
+		{/if}
+	</MediaQuery>
+	<body>
+		<Info serverCount=61576/>
+
+	</body>
 </main>
 
 <style>
-
+	body {
+		margin: 0;
+		padding-top: 150px;
+		background: #2d2d2f;
+		color: #f4f1eb;
+	}
 </style>

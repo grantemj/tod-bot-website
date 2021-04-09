@@ -26,6 +26,8 @@
 <style>
     main {
         position: absolute;
+        display: flex;
+        align-items: center;
         width: 100%;
         background: #202122;
         color: #f4f1eb;
@@ -37,19 +39,21 @@
     #pfp {
         float: left;
         border-radius: 50%;
-        height: 60px;
-        margin: 13px 30px 13px 35px;
+        height: 40px;
+        margin-left: 25px;
+        margin-right: 15px;
     }
 
     #title {
         float: left;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 26px;
     }
 
     nav {
         float: right;
         background: #202122;
+        margin-left: auto;
     }
 
     nav ul {
@@ -59,10 +63,10 @@
     }
 
     nav ul li {
-        padding: 10px 25px 10px 25px;
+        padding: 5px 15px 5px 15px;
         margin: 0px 0px 0px 0px;
         list-style: none;
-        font-size: 24px;
+        font-size: 18px;
         font-family: "Rubik";
         color: #f4f1eb;
         position: relative;
@@ -115,7 +119,7 @@
     }
 
     nav ul li ul li {
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 300;
     }
 </style>
