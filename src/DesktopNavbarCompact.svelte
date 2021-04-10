@@ -39,7 +39,7 @@
     #pfp {
         float: left;
         border-radius: 50%;
-        height: 40px;
+        height: 2.5rem;
         margin-left: 25px;
         margin-right: 15px;
     }
@@ -47,7 +47,7 @@
     #title {
         float: left;
         font-weight: 500;
-        font-size: 26px;
+        font-size: 1.625rem;
     }
 
     nav {
@@ -66,7 +66,7 @@
         padding: 5px 15px 5px 15px;
         margin: 0px 0px 0px 0px;
         list-style: none;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-family: "Rubik";
         color: #f4f1eb;
         position: relative;
@@ -120,7 +120,7 @@
     }
 
     nav ul li ul li {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 300;
     }
 </style>
