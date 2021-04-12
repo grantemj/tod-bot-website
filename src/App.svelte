@@ -4,9 +4,11 @@
 	import MobileNavbar from './MobileNavbar.svelte'
 	import Info from './Info.svelte'
 	import About from './About.svelte'
+	import GetStarted from './GetStarted.svelte'
+	import Commands from './Commands.svelte'
 
 	let viewingWidth = 1440
-	$: viewingMode = (viewingWidth < 811) ? 'mobile' : (viewingWidth < 1181) ? 'compact' : 'desktop'
+	$: viewingMode = (viewingWidth < 841) ? 'mobile' : (viewingWidth < 1181) ? 'compact' : 'desktop'
 
 	function resizeText() {
 		let currentWidth = window.innerWidth
@@ -16,10 +18,21 @@
 		})
 	}
 
-	window.onload = resizeText
+	function resizeRows() {
+		let currentWidth = window.innerWidth
+		let calculatedWidth = (1/13) + (997 / currentWidth);
+		([...document.getElementsByClassName("row")]).forEach(item => {
+			item.style.width = Math.max(70, Math.min(calculatedWidth * 100, 100)) + "%"
+		})
+	}
+
+	window.onload = () => {
+		resizeText()
+		resizeRows()
+	}
 </script>
 
-<svelte:window bind:innerWidth={viewingWidth} on:resize={resizeText}/>
+<svelte:window bind:innerWidth={viewingWidth} on:resize={() => {resizeText(); resizeRows();}}/>
 
 <main>
 	{#if viewingMode === 'mobile'}
@@ -32,6 +45,8 @@
 	<body>
 		<Info serverCount=61576 viewingMode={viewingMode}/>
 		<About />
+		<GetStarted />
+		<Commands />
 	</body>
 </main>
 
