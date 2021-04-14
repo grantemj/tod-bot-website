@@ -6,6 +6,7 @@
 	import About from './About.svelte'
 	import GetStarted from './GetStarted.svelte'
 	import Commands from './Commands.svelte'
+	import Contact from './Contact.svelte'
 
 	let viewingWidth = 1440
 	$: viewingMode = (viewingWidth < 841) ? 'mobile' : (viewingWidth < 1181) ? 'compact' : 'desktop'
@@ -49,6 +50,7 @@
 		<About />
 		<GetStarted />
 		<Commands />
+		<Contact />
 	</body>
 </main>
 
