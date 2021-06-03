@@ -32,5 +32,6 @@
         color: #f4f1eb;
         font-family: "Rubik";
         font-size: 1.25rem;
+        cursor: pointer;
     }
 </style>

@@ -56,10 +56,6 @@ button:not(:disabled):active {
 	background-color: #ddd;
 }
 
-button:focus {
-	border-color: #666;
-}
-
 .section-title {
 	font-family: "Montserrat";
 	font-size: 60px;
