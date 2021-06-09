@@ -8,12 +8,12 @@
     <nav>
         <ul>
             <li id="home-nav">
-                <a href="https://truthordarebot.xyz" target="_self">Home</a>
+                <a href="/" target="_self">Home</a>
                 <ul>
-                    <li><a href="https://truthordarebot.xyz/#about-anchor" target="_self">About</a></li>
-                    <li><a href="https://truthordarebot.xyz/#getting-started-anchor" target="_self">Getting Started</a></li>
-                    <li><a href="https://truthordarebot.xyz/#commands-anchor" target="_self">Commands</a></li>
-                    <li><a href="https://truthordarebot.xyz/#contact-anchor" target="_self">Contact</a></li>
+                    <li><a href="/#about" target="_self">About</a></li>
+                    <li><a href="/#get-started" target="_self">Getting Started</a></li>
+                    <li><a href="/#commands" target="_self">Commands</a></li>
+                    <li><a href="/#contact" target="_self">Contact</a></li>
                 </ul>
             </li>
             <li><a href="feedback" target="_self">Give Feedback</a></li>
@@ -25,7 +25,7 @@
 
 <style>
     #desktop-navbar {
-        position: absolute;
+        position: fixed;
         width: 100%;
         background: #202122;
         color: #f4f1eb;
@@ -116,7 +116,7 @@
     }
 
     nav ul li ul li {
-        font-size: 1.675rem;
+        font-size: 1.5rem;
         font-weight: 300;
     }
 </style>

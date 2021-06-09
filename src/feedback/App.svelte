@@ -26,7 +26,7 @@
 		<DesktopNavbar />
 	{/if}
     <body>
-        <h1 class="section-title">Question Submission</h1>
+        <h1 class="section-title">Feedback</h1>
 		<Form />
     </body>
 </main>
@@ -34,8 +34,8 @@
 <style>
     body {
 		margin: 0;
-		padding-top: 10rem;
-		padding-bottom: 10rem;
+		padding-top: 160px;
+		padding-bottom: 160px;
 		background: #2d2d2f;
 		color: #f4f1eb;
 		text-align: center;

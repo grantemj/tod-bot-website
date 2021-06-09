@@ -8,6 +8,12 @@
 	import Commands from './Commands.svelte'
 	import Contact from './Contact.svelte'
 
+	(async function() {
+		let response = await fetch('https://truthordarebot.xyz/server_count')
+		serverCount = await response.text()
+	})()
+	var serverCount = 0
+
 	let viewingWidth = 1440
 	$: viewingMode = (viewingWidth < 841) ? 'mobile' : (viewingWidth < 1181) ? 'compact' : 'desktop'
 
@@ -26,9 +32,9 @@
 	}
 
 	$: { 	// tooltips
-		let columnWidth = Math.max(70, Math.min((100/13) + (99700 / viewingWidth), 100)) * viewingWidth / 3
+		let columnWidth = document.querySelector(".column")?.clientWidth || viewingWidth / 3
 		// ^ width of column in px
-		let calculatedWidth = 250 + 146 / (1 + Math.exp((viewingWidth / -153) + 8.37));
+		let calculatedWidth = 237.5 + 138.7 / (1 + Math.exp((columnWidth / -54) + 8.81));
 		([...document.getElementsByClassName("tooltip")]).forEach(item => {
 			item.style.width = calculatedWidth + "px"
 		})
@@ -46,10 +52,10 @@
 		<DesktopNavbar />
 	{/if}
 	<body>
-		<Info serverCount=61576 viewingMode={viewingMode}/>
+		<Info serverCount={serverCount} viewingMode={viewingMode}/>
 		<About />
 		<GetStarted />
-		<Commands />
+		<Commands viewingMode={viewingMode} />
 		<Contact />
 	</body>
 </main>

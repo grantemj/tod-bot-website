@@ -21,7 +21,7 @@
     }
 
     code {
-        font-size: 2.5rem;
+        font-size: 1.111em;
         color: inherit;
         background: none;
         padding: 0;
@@ -32,6 +32,7 @@
         font-size: 2.25rem;
         font-weight: 600;
         color: #cd8a3f;
+        font-family: 'Montserrat';
     }
 
     img.desktop {
@@ -47,5 +48,15 @@
     img.mobile {
         width: 14rem;
         height: 14rem;
+    }
+
+    @media (max-width: 400px) {
+        .section-title {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+        }
     }
 </style>
